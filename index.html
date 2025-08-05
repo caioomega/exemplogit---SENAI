@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="style.css">
+    *// criando um portfolio simples //*
 </head>
 <body>
     <div class="header">
@@ -13,7 +15,35 @@
             <a href="#">Projetos</a>
             <a href="#">Sobre</a>
         </header>
+        <h1>Bem-vindo ao Meu Site</h1>
+        <p>Este é um exemplo de site simples.</p>
+        <button>Saiba Mais</button>
     </div>
+    <div class="content">
+        <section>
+            <h2>Seção 1</h2>
+            <p>Conteúdo da seção 1.</p>
+        </section>
+        <section>
+            <h2>Seção 2</h2>
+            <p>Conteúdo da seção 2.</p>
+        </section>
+        <section>
+            <h2>Seção 3</h2>
+            <p>Conteúdo da seção 3.</p>
+        </section>
+    </div>
+    <div class="footer">
+        <footer>
+            <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.querySelector('button').addEventListener('click', function() {
+            alert('Botão clicado!');
+        });
+    </script>
     
 </body>
 </html>
