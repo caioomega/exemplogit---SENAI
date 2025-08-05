@@ -1,53 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Caio Mega | Portfólio</title>
     <link rel="stylesheet" href="style.css">
-     criando um portfolio simples //*
 </head>
 <body>
     <div class="header">
         <header>
-            <a href="#">Inicio</a>
-            <a href="#">Cursos</a>
-            <a href="#">Projetos</a>
-            <a href="#">Sobre</a>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
         </header>
-        <h1>Bem-vindo ao Meu Site</h1>
-        <p>Este é um exemplo de site simples.</p>
-        <button>Saiba Mais</button>
+        <div class="hero" id="inicio">
+            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Foto de Caio Mega" class="profile-img">
+            <h1>Caio Mega</h1>
+            <h2>Desenvolvedor Full Stack</h2>
+            <p>Transformando ideias em soluções digitais incríveis.</p>
+            <button onclick="window.location='#contato'">Fale comigo</button>
+        </div>
     </div>
     <div class="content">
-        <section>
-            <h2>Seção 1</h2>
-            <p>Conteúdo da seção 1.</p>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul class="skills">
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React & Node.js</li>
+                <li>Python</li>
+                <li>Git & GitHub</li>
+                <li>Banco de Dados</li>
+            </ul>
         </section>
-        <section>
-            <h2>Seção 2</h2>
-            <p>Conteúdo da seção 2.</p>
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto 1.</p>
+                    <a href="#" target="_blank">Ver mais</a>
+                </div>
+                <div class="project-card">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto 2.</p>
+                    <a href="#" target="_blank">Ver mais</a>
+                </div>
+                <div class="project-card">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do projeto 3.</p>
+                    <a href="#" target="_blank">Ver mais</a>
+                </div>
+            </div>
         </section>
-        <section>
-            <h2>Seção 3</h2>
-            <p>Conteúdo da seção 3.</p>
-        </section>
-        <section>
-            <h2>Seção 4</h2>
-            <p>Conteúdo da seção 4.</p>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="social">
+                <a href="https://github.com/" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+                <a href="mailto:caio@email.com">E-mail</a>
+            </div>
         </section>
     </div>
     <div class="footer">
         <footer>
-            <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Caio Mega. Todos os direitos reservados.</p>
         </footer>
     </div>
     <script src="script.js"></script>
     <script>
-        document.querySelector('button').addEventListener('click', function() {
-            alert('Botão clicado!');
+        document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada! Obrigado pelo contato.');
         });
     </script>
-    
 </body>
 </html>
